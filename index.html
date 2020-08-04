@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.9">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  
+  <title>VM creation on GCP</title>
+  <style>
+  .carousel {
+  position: relative;
+}
+
+.carousel-caption {
+  position: absolute;
+  background: rgba(0,0,0,0.4);
+  padding: 15px 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 2%;
+  background:black;
+}
+.carousel-indicators li {
+  width: 5px;
+  height: 5px;
+}
+</style>
+</head>
+<body>
+  <h1 class="display-5 text-center text-dark mb-3">VM creation on GCP</h1>
+  <div class="container">
+    <div id="magicCarousel" class="carousel slide my-3" data-ride="carousel">
+      
+<!--    Carousel Indicators    -->
+      <ol class="carousel-indicators">
+        <li data-target="#magicCarousel" data-slide-to="0"></li>
+        <li data-target="#magicCarousel" data-slide-to="1"></li>
+        <li data-target="#magicCarousel" data-slide-to="2"></li>
+        <li data-target="#magicCarousel" data-slide-to="3"></li>
+		<li data-target="#magicCarousel" data-slide-to="4"></li>
+		<li data-target="#magicCarousel" data-slide-to="5"></li>
+		<li data-target="#magicCarousel" data-slide-to="6"></li>
+        <li data-target="#magicCarousel" data-slide-to="7"></li>
+        <li data-target="#magicCarousel" data-slide-to="8"></li>
+		<li data-target="#magicCarousel" data-slide-to="9"></li>
+		<li data-target="#magicCarousel" data-slide-to="10"></li>
+		<li data-target="#magicCarousel" data-slide-to="11"></li>
+      </ol>
+      
+<!--    Carousel Slider    -->
+      <div class="carousel-inner" role="listbox" style="border-top:solid;border-bottom:solid;border-color:#1a73e9">
+	  
+	    <div class="carousel-item active">
+          <img src="img/1.png" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Step 1</h3>
+            <p>Go to “https://cloud.google.com/” and click “Console”</p>
+          </div> 
+        </div>
+		
+        <div class="carousel-item">
+          <img src="img/2.png" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Step 2</h3>
+            <p>You will be asked to agree to the Terms of Service, Agree and continue and you should see this screen. Click on “Select a Project”.</p>
+          </div> 
+        </div>
+        
+        <div class="carousel-item">
+          <img src="img/3.png" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Step 3</h3>
+            <p>On the pop up window select the organization for work or university from the dropdown and then click “NEW PROJECT"</p>
+          </div> 
+        </div>
+        
+        <div class="carousel-item">
+          <img src="img/4.png" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Step 4</h3>
+            <p>On the following screen then choose a Project Name, Organization and/or Location and click “CREATE”</p>
+          </div> 
+        </div>
+		
+		<div class="carousel-item">
+          <img src="img/4.png" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Step 5</h3>
+            <p>Go back to the console and from “Select a Project” choose the project name you have created in the previous step. From the menu on the left, select “Billing”, then “LINK A BILLING ACCOUNT” and set an account</p>
+          </div> 
+        </div>
+		
+		<div class="carousel-item">
+          <img src="img/6.png" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Step 6</h3>
+            <p>From the console menu, go to “Compute Engine” and click VM instances</p>
+          </div> 
+        </div>
+		
+		<div class="carousel-item">
+          <img src="img/7.png" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Step 7</h3>
+            <p>Once the Compute engine is ready, click “Create”</p>
+          </div> 
+        </div>
+		
+		<div class="carousel-item">
+          <img src="img/9.png" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Step 8</h3>
+            <p>Now, choose the configuration for your VM which will also decide the pricing estimate. You can choose a name, the region in which the VM will be located based on your needs, machine series (Check Google’s documentation for this. Different series support different configurations. Example – Only selected series support a GPU) </p>
+          </div> 
+        </div>
+		
+		<div class="carousel-item">
+          <img src="img/9.png" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Step 9</h3>
+            <p>You can also create a custom Machine Type by selecting the number of CPUs and RAM required. (The screenshots are from the time and day I was creating this, the pricing and other details can change based on various factors)</p>
+          </div> 
+        </div>
+		
+		<div class="carousel-item">
+          <img src="img/10.png" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Step 10</h3>
+            <p>You can also select the CPU platform and add GPUs. From the Boot Disk -> “Change” option, select the OS and disk size</p>
+          </div> 
+        </div>
+		
+		<div class="carousel-item">
+          <img src="img/11.png" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Step 11</h3>
+            <p>You can set Firewall rules as per your requirements. After, you have set your desired VM configuration, it’s time to “Create”. (You may want to check your pricing estimate before this)</p>
+          </div> 
+        </div>
+		
+		<div class="carousel-item">
+          <img src="img/12.png" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Step 12</h3>
+            <p>Your VM instance name will appear on the screen and the green check indicates it has been created successfully. You can now set a password and use the “External IP”  to remotely connect and use the VM</p>
+          </div> 
+        </div>
+        
+        
+<!--     Carousel Controls     -->
+        <a href="#magicCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a href="#magicCarousel" class="carousel-control-next" role="button" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="sr-only">Next</span>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+  <p class="display-5 text-center text-dark mb-5"><u>Tip</u>: Before you start make sure you are using the right Google account. I would recommend logging out of all accounts and keeping just the one you want to use active.</p>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+    $('.carousel').carousel({
+  interval: 7000
+})
+</script>
+</body>
+</html>
